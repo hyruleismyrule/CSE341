@@ -132,9 +132,28 @@
 
 const routes = require('express').Router();
 
-routes.get('/', (req, res) => {
-    res.send('Cynthia Rawlings');
-})
+// routes.get('/', (req, res) => {
+//     res.send('Cynthia Rawlings');
+// })
+
+// module.exports = routes;
+
+// const { controllers } = require("../controllers/index"); 
+// console.log(controllers);
+// console.log(controllers.messageWindow);
+
+const { index } = require("../controllers/index");
+
+console.log(index);
+
+// teacher code
+// const routes = (router) => {
+//     router.send("/", index);
+
+//     return router;
+// };
+
+routes.get('/', index);
 
 module.exports = routes;
 

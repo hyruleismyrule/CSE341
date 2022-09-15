@@ -62,3 +62,21 @@
 // ***************
 // Controllers
 // ***************
+
+
+// function messageWindow() {
+//     const index = (req, res) => {
+//         res.send('Cynthia Rawlings - Controllers');
+//     }    
+//     return index;
+// }
+
+// // module.exports.messageWindow = messageWindow();
+// module.exports = { messageWindow };
+
+const index = (_req, res) => {
+    res.send("Cynthia Rawlings");
+};
+
+module.exports = { index };
+
