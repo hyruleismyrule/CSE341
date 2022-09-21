@@ -1,2 +1,3 @@
 To do
 Fix routs/contacts.js
+How to debug node
