@@ -1,8 +1,11 @@
 const { MongoClient } = require("mongodb");
+const dotenv = require("dotenv");
+dotenv.config();
+const safeConnectionString = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.zxiazbs.mongodb.net/?retryWrites=true&w=majority`;
 
 async function main() {
 
-    const uri = "mongodb+srv://admin:rxK4G8ruhGwrpQzT@cluster0.zxiazbs.mongodb.net/?retryWrites=true&w=majority";
+    const uri = safeConnectionString;
 
     const client = new MongoClient(uri);
 
@@ -18,32 +21,32 @@ async function main() {
         //     bathrooms: 1
         // });
 
-        await createMultipleListings(client, [
-            {
-                name: "Infinite Views",
-                summary: "Modern home with indinite views from the infinity pool.",
-                property_type: "House",
-                bedrooms: 5,
-                bathrooms: 4.5,
-                beds: 5
-            },
-            {
-                name: "Infinite Views2",
-                summary: "Modern home with indinite views from the infinity pool2.",
-                property_type: "House",
-                bedrooms: 5,
-                bathrooms: 4.5,
-                beds: 5
-            },
-            {
-                name: "Infinite Views3",
-                summary: "Modern home with indinite views from the infinity pool3.",
-                property_type: "House",
-                bedrooms: 5,
-                bathrooms: 4.5,
-                beds: 5
-            }
-        ]);
+        // await createMultipleListings(client, [
+        //     {
+        //         name: "Infinite Views",
+        //         summary: "Modern home with indinite views from the infinity pool.",
+        //         property_type: "House",
+        //         bedrooms: 5,
+        //         bathrooms: 4.5,
+        //         beds: 5
+        //     },
+        //     {
+        //         name: "Infinite Views2",
+        //         summary: "Modern home with indinite views from the infinity pool2.",
+        //         property_type: "House",
+        //         bedrooms: 5,
+        //         bathrooms: 4.5,
+        //         beds: 5
+        //     },
+        //     {
+        //         name: "Infinite Views3",
+        //         summary: "Modern home with indinite views from the infinity pool3.",
+        //         property_type: "House",
+        //         bedrooms: 5,
+        //         bathrooms: 4.5,
+        //         beds: 5
+        //     }
+        // ]);
 
     } catch (e) {
         console.error(e);
@@ -54,6 +57,11 @@ async function main() {
 }
 
 main().catch(console.error);
+
+async function findOneListingByName(client, nameOfListing) {
+    // stop here for now, 18:26
+    client.db("sample_airbnb").collection("listingsAndReviews").findOne()
+}
 
 async function createMultipleListings(client, newListings) {
     const result = await client.db("sample_airbnb").collection("listingsAndReviews").insertMany(newListings);

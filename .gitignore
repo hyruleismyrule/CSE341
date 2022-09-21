@@ -1,5 +1,6 @@
 # Other
 .DS_STORE
+.env
 # Logs
 logs
 *.log

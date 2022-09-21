@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/hyruleismyrule/CSE341#readme",
   "dependencies": {
+    "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "mongodb": "^4.10.0"
   },
