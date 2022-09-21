@@ -11,6 +11,6 @@ routes.get('/', index);
 const contacts = require("../controllers/contacts");
 
 // routes.get('/', index);
-routes.get('/contacts', contacts);
+routes.get('/api/contacts', contacts);
 
 module.exports = routes;
