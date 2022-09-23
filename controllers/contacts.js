@@ -11,6 +11,7 @@ const safeConnectionString = `mongodb+srv://${process.env.DB_USERNAME}:${process
 // Get all contacts
 let allContacts = "";
 let idContact = "";
+
 async function main() {
     const uri = safeConnectionString;
     const client = new MongoClient(uri);
@@ -41,9 +42,9 @@ const contacts = (request, response) => {
     // response.send(allContacts);
     response.send(idContact);
 };
-module.exports = contacts;
+// module.exports = contacts;
 // module.exports = {
 //     contacts
 // }
-// module.exports.allContacts = contacts;
+module.exports.allContacts = allContacts;
 // module.exports = contacts;
