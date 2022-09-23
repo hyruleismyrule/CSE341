@@ -1,22 +1,27 @@
 // ***************
-// Routes
+// Routes / Main Router
 // ***************
 
-const routes = require('express').Router();
+// Imports
+const express = require('express');
+const router = express.Router();
 
-const index = require("../controllers/index");
+// Main
+router.use('/contacts', require('./contacts'))
 
-routes.get('/', index);
+// Exports
+module.exports = router;
+
+
+// routes.get('/api/contacts/', contactId);
 // routes.get('/cat', index);
-const contacts = require("../controllers/contacts");
 // const contactId = require("../controllers/contacts");
-
 // routes.get('/', index);
 
-// All contacts
-routes.get('/api/contacts', contacts);
 
-// One contact by Id
-// routes.get('/api/contacts/', contactId);
-
-module.exports = routes;
+// const routes = require('express').Router();
+// const index = require("../controllers/index");
+// routes.get('/', index);
+// const contacts = require("../controllers/contacts");
+// routes.get('/api/contacts', contacts);
+// module.exports = routes;
