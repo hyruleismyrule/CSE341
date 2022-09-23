@@ -9,9 +9,16 @@ const router = express.Router();
 const contactsController = require('../controllers/contacts');
 
 // Main
-router.get('/', contactsController.getAllContacts);
+// router.get('/', contactsController.getAllContacts);
 
-router.get('/:id', contactsController.getContactById);
+// router.get('/:id', contactsController.getContactById);
+
+//
+
+router.get('/', contactsController.getAll);
+
+router.get('/:id', contactsController.getSingle);
+
 
 // Exports
 module.exports = router;
