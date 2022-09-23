@@ -3,12 +3,17 @@
 // ***************
 
 // Imports
-const client = require('../connections/index');
+const mongodb = require('../connections/index');
 const ObjectId = require('mongodb').ObjectId;
+
+const client = mongodb.getMongoClient();
+
+console.log(client);
 
 // Main
 const getAllContacts = async (request, response) => {
-    const result = await client.db("cse341").collection("contacts").find().toArray().then((result) => {
+    const client2 = mongodb.getMongoClient();
+    const result = await client2.db("cse341").collection("contacts").find().toArray().then((result) => {
         response.setHeader('Content-Type', 'application/json');
         response.status(200).json(result);
     });
