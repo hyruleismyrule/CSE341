@@ -1,3 +1,29 @@
 To do
 Fix routs/contacts.js
 How to debug node
+
+
+    // const result = await client.db("cse341").collection("contacts").findOne({_id: contactId}).toArray();
+    // const result = await client.db("cse341").collection("contacts").findOne({"_id": "632b8e645f590ab44e8023c4"});
+    // const result = await client.db("cse341").collection("contacts").find({"_id": "632b8e645f590ab44e8023c4"});
+    // const result = await client.db("cse341").collection("contacts").findById(ObjectId("632b8e645f590ab44e8023c4"));
+    // const result = await client.db("cse341").collection("contacts").findById("632b8e645f590ab44e8023c4");
+    // const result = await client.db("cse341").collection("contacts").find({}, { projection: { _id: "632b8e645f590ab44e8023c4" } }).toArray();
+
+
+    // const result = await client.db("cse341").collection("contacts").findOne({"firstName": "Natasha"});
+    // const result = await client.db("cse341").collection("contacts").findOne({_id: "632b8e645f590ab44e8023c4"});
+
+    // const result = await client.db("cse341").collection("contacts").findOne({"_id": "new ObjectId:('632b8e645f590ab44e8023c4')"});
+    // const result = await client.db("cse341").collection("contacts").findOne({"_id": "ObjectId:('632b8e645f590ab44e8023c4')"});
+
+    // const result = await client.db("cse341").collection("contacts").findOne({"ObjectId": "632b8e645f590ab44e8023c4"});
+    
+    // let id = new MongoClient.ObjectID(contactId);
+    // const result = await client.db("cse341").collection("contacts").findOne({"_id": new ObjectId("632b8e645f590ab44e8023c4")});
+
+    
+
+    // const result = await client.db("cse341").collection("contacts").findOne({"_id": id});
+
+    // const result = await client.db("cse341").collection("contacts").findOne({"email": "calico.cat@gmail.com"});
