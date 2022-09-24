@@ -33,6 +33,8 @@ const getDb = () => {
   return _db;
 };
 
+console.log("Made it to the end of the connections/indes.js")
+
 module.exports = {
   initDb,
   getDb,
