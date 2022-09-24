@@ -14,8 +14,7 @@ const initDb = (callback) => {
     console.log('Db is already initialized!');
     return callback(null, _db);
   }
-  // MongoClient.connect(process.env.MONGODB_URI)
-  MongoClient.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.zxiazbs.mongodb.net/?retryWrites=true&w=majority`)
+  MongoClient.connect(process.env.MONGODB_URI)
     .then((client) => {
       _db = client;
       callback(null, _db);
