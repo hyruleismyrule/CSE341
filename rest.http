@@ -1,1 +1,25 @@
-GET https://www.google.com
+# localhost:3000
+# All Contacts
+GET http://localhost:3000/api/contacts
+###
+
+# Individual Contacts by Id
+GET http://localhost:3000/api/contacts/632b8e645f590ab44e8023c4
+###
+GET http://localhost:3000/api/contacts/632b8fa75f590ab44e8023c5
+###
+GET http://localhost:3000/api/contacts/632b8fbe5f590ab44e8023c6
+###
+
+# render
+# All Contacts
+GET https://cse341-cynthia-rawlings.onrender.com/api/contacts
+###
+
+# Individual Contacts by Id
+GET https://cse341-cynthia-rawlings.onrender.com/api/contacts/632b8e645f590ab44e8023c4
+###
+GET https://cse341-cynthia-rawlings.onrender.com/api/contacts/632b8fa75f590ab44e8023c5
+###
+GET https://cse341-cynthia-rawlings.onrender.com/api/contacts/632b8fbe5f590ab44e8023c6
+###
