@@ -6,7 +6,7 @@
 const mongodb = require('../connections/index');
 const ObjectId = require('mongodb').ObjectId;
 
-console.log(mongodb);
+// console.log(mongodb);
 
 // Main
 const getAllContacts = async (request, response) => {
@@ -14,7 +14,7 @@ const getAllContacts = async (request, response) => {
     response.setHeader('Content-Type', 'application/json');
     response.status(200).json(result);
   });
-  console.log(result);
+  // console.log(result);
 };
 
 const getContactById = async (request, response) => {
@@ -24,7 +24,7 @@ const getContactById = async (request, response) => {
     response.setHeader('Content-Type', 'application/json');
     response.status(200).json(result);
   });
-  console.log(result);
+  // console.log(result);
 };
 
 // Exports

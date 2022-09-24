@@ -28,4 +28,4 @@ mongodb.initDb((err, mongodb) => {
   }
 });
 
-console.log("Made it to the end of server.js")
+// console.log("Made it to the end of server.js")
