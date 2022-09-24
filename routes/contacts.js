@@ -1,5 +1,5 @@
 // *****************
-// Routes / Contacts Router
+// Routes - routes/contacts.js
 // *****************
 
 // Imports
@@ -9,34 +9,9 @@ const router = express.Router();
 const contactsController = require('../controllers/contacts');
 
 // Main
-// router.get('/', contactsController.getAllContacts);
+router.get('/', contactsController.getAllContacts);
 
-// router.get('/:id', contactsController.getContactById);
-
-//
-
-router.get('/', contactsController.getAll);
-
-router.get('/:id', contactsController.getSingle);
-
+router.get('/:id', contactsController.getContactById);
 
 // Exports
 module.exports = router;
-
-
-
-
-
-
-
-
-
-
-// const routes = require('express').Router();
-
-// const contacts = require("../controllers/contacts");
-
-// // routes.get('/', index);
-// routes.get('/contacts', contacts);
-
-// module.exports = routes;

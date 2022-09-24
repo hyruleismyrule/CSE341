@@ -1,36 +1,8 @@
 // *****************
-// Connections / Main / Mongo
+// Connections - connections/index.js
 // *****************
 
 // Connect to mongodb
-// Imports
-// const { MongoClient } = require("mongodb");
-// const dotenv = require("dotenv");
-// const { restart } = require("nodemon");
-// dotenv.config();
-
-// Main
-// async function getMongoClient() {
-//     const client = new MongoClient(process.env.MONGODB_URI);
-//     try {
-//         await client.connect();
-//         console.log("database");
-//     } catch (e) {
-//         console.error(e);
-//     } finally {
-//         await client.close();
-//     }
-//     // return client;
-// }
-
-// // Exports
-// module.exports = {
-//     getMongoClient
-// };
-
-// 
-
-
 const dotenv = require('dotenv');
 dotenv.config();
 const MongoClient = require('mongodb').MongoClient;

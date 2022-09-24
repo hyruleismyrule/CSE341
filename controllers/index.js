@@ -1,5 +1,5 @@
 // ***************
-// Controllers / Main Controller
+// Controllers - index.js
 // ***************
 
 const index = (request, response) => {
