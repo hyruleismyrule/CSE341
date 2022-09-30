@@ -9,14 +9,17 @@ const ObjectId = require('mongodb').ObjectId;
 // console.log(mongodb);
 
 // Main
+
+// GET / Read
+// All
 const getAllContacts = async (request, response) => {
   const result = await mongodb.getDb().db('cse341').collection("contacts").find().toArray().then((result) => {
     response.setHeader('Content-Type', 'application/json');
     response.status(200).json(result);
   });
-  // console.log(result);
 };
 
+// Single by Id
 const getContactById = async (request, response) => {
   const contactId = new ObjectId(request.params.id);
 
@@ -24,8 +27,16 @@ const getContactById = async (request, response) => {
     response.setHeader('Content-Type', 'application/json');
     response.status(200).json(result);
   });
-  // console.log(result);
 };
+
+// POST / Create
+// Create Single Contact
+
+
+
+
+
+
 
 // Exports
 module.exports = { getAllContacts, getContactById };

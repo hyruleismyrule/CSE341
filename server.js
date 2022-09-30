@@ -3,6 +3,7 @@
 // npm i
 // npm install express
 // npm install nodemon
+// npm install body-parser --save
 // Change package.json
 // this part to
 // "scripts": {
