@@ -9,9 +9,9 @@ GET http://localhost:3000/api/contacts
 # Individual Contacts by Id
 GET http://localhost:3000/api/contacts/632b8e645f590ab44e8023c4
 ###
-GET http://localhost:3000/api/contacts/632b8fa75f590ab44e8023c5
-###
 GET http://localhost:3000/api/contacts/632b8fbe5f590ab44e8023c6
+###
+GET http://localhost:3000/api/contacts/63378e43cace72b05b84b843
 ###
 
 # POST
@@ -41,10 +41,11 @@ content-type: application/json
 
 ###
 # DELETE
-DELETE http://localhost:8080/contacts/63387ca7804e5447f2d618ef HTTP/1.1
+DELETE http://localhost:3000/api/contacts/63387b7d7c3ff0c2ea0bd025 HTTP/1.1
 
 # ***************************
 # Render
+# GET
 # All Contacts
 GET https://cse341-cynthia-rawlings.onrender.com/api/contacts
 ###
@@ -52,7 +53,36 @@ GET https://cse341-cynthia-rawlings.onrender.com/api/contacts
 # Individual Contacts by Id
 GET https://cse341-cynthia-rawlings.onrender.com/api/contacts/632b8e645f590ab44e8023c4
 ###
-GET https://cse341-cynthia-rawlings.onrender.com/api/contacts/632b8fa75f590ab44e8023c5
-###
 GET https://cse341-cynthia-rawlings.onrender.com/api/contacts/632b8fbe5f590ab44e8023c6
 ###
+GEThttps://cse341-cynthia-rawlings.onrender.com/api/contacts/63378e43cace72b05b84b843
+###
+
+# POST
+POST https://cse341-cynthia-rawlings.onrender.com/api/contacts HTTP/1.1 
+content-type: application/json
+
+{
+    "firstName": "Squid", 
+    "lastName": "Vilian", 
+    "email": "meancat@gmail.com", 
+    "favoriteColor": "Blue", 
+    "birthday": "02/04/2020"
+}
+
+###
+# PUT
+PUT https://cse341-cynthia-rawlings.onrender.com/api/contacts/63386efcbe49c53e3b2da0bd HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Natasha", 
+    "lastName": "Morton", 
+    "email": "fluffycat@gmail.com", 
+    "favoriteColor": "Red", 
+    "birthday": "07/04/2019"
+}
+
+###
+# DELETE
+DELETE https://cse341-cynthia-rawlings.onrender.com/api/contacts/63387b7d7c3ff0c2ea0bd025 HTTP/1.1
