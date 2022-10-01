@@ -2,7 +2,6 @@
 .DS_STORE
 .env
 package-lock.json
-yarn.lock
 Icon
 .eslintrc.js
 # Logs
