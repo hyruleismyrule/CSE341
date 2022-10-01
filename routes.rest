@@ -12,7 +12,7 @@ POST http://localhost:3000/api/contacts HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Natasha",
+    "firstName":"Val",
     "lastName":"Weaver",
     "email":"aWeaver@test.com",
     "favoriteColor":"Brown",

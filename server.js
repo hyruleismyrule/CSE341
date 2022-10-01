@@ -16,13 +16,13 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const bodyParser = require('body-parser');
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded());
 
 const mongodb = require('./connections/index');
 
 // app.use(express.bodyParser());
-app.use('/', require('./routes'));
+// app.use('/', require('./routes'));
 
 // Main
 app
