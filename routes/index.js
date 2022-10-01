@@ -3,12 +3,11 @@
 // ***************
 
 // Imports
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 // Main
-router.use('/api/contacts', require('./contacts'));
-
+router.use("/api/contacts", require("./contacts"));
 
 // Exports
 module.exports = router;

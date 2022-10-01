@@ -12,22 +12,21 @@
 // },
 
 // Imports
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3000;
-const bodyParser = require('body-parser');
-const mongodb = require('./connections/index');
-
+const bodyParser = require("body-parser");
+const mongodb = require("./connections/index");
 
 // Main
 // Body Paser / calling routes
 app
   .use(bodyParser.json())
   .use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader("Access-Control-Allow-Origin", "*");
     next();
   })
-  .use('/', require('./routes'));
+  .use("/", require("./routes"));
 
 // Connect to Mongodb
 mongodb.initDb((err, mongodb) => {

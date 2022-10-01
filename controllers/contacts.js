@@ -3,8 +3,8 @@
 // ***************
 
 // Imports
-const mongodb = require('../connections/index');
-const ObjectId = require('mongodb').ObjectId;
+const mongodb = require("../connections/index");
+const ObjectId = require("mongodb").ObjectId;
 
 // console.log(mongodb);
 
@@ -12,8 +12,8 @@ const ObjectId = require('mongodb').ObjectId;
 // GET / Read
 // All
 const getAllContacts = async (req, res) => {
-  const result = await mongodb.getDb().db('cse341').collection("contacts").find().toArray().then((result) => {
-    res.setHeader('Content-Type', 'application/json');
+  const result = await mongodb.getDb().db("cse341").collection("contacts").find().toArray().then((result) => {
+    res.setHeader("Content-Type", "application/json");
     res.status(200).json(result);
   });
 };
@@ -22,8 +22,8 @@ const getAllContacts = async (req, res) => {
 const getContactById = async (req, res) => {
   const contactId = new ObjectId(req.params.id);
 
-  const result = await mongodb.getDb().db('cse341').collection("contacts").find({ _id: contactId }).toArray().then((result) => {
-    res.setHeader('Content-Type', 'application/json');
+  const result = await mongodb.getDb().db("cse341").collection("contacts").find({ _id: contactId }).toArray().then((result) => {
+    res.setHeader("Content-Type", "application/json");
     res.status(200).json(result);
   });
 };
@@ -38,11 +38,11 @@ const createContact = async (req, res) => {
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday
   };
-  const response = await mongodb.getDb().db('cse341').collection('contacts').insertOne(contact);
+  const response = await mongodb.getDb().db("cse341").collection("contacts").insertOne(contact);
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
-    res.status(500).json(response.error || 'Some error occurred while creating the contact.');
+    res.status(500).json(response.error || "Some error occurred while creating the contact.");
   }
 };
 
@@ -56,22 +56,22 @@ const updateContact = async (req, res) => {
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday
   };
-  const response = await mongodb.getDb().db('cse341').collection('contacts').replaceOne({ _id: contactId }, contact);
+  const response = await mongodb.getDb().db("cse341").collection("contacts").replaceOne({ _id: contactId }, contact);
   if (response.modifiedCount > 0) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Some error occurred while updating the contact.');
+    res.status(500).json(response.error || "Some error occurred while updating the contact.");
   }
 };
 
 // DELETE
 const deleteContact = async (req, res) => {
   const contactId = new ObjectId(req.params.id);
-  const response = await mongodb.getDb().db('cse341').collection('contacts').deleteOne({ _id: contactId }, true);
+  const response = await mongodb.getDb().db("cse341").collection("contacts").deleteOne({ _id: contactId }, true);
   if (response.deletedCount > 0) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
+    res.status(500).json(response.error || "Some error occurred while deleting the contact.");
   }
 };
 

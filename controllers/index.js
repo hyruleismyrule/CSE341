@@ -2,8 +2,8 @@
 // Controllers - index.js
 // ***************
 
-const index = (request, response) => {
-    response.send("Cynthia Rawlings");
+const index = (req, res) => {
+  res.send("Cynthia Rawlings");
 };
 
 // Exports
