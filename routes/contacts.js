@@ -14,14 +14,14 @@ const contactsController = require('../controllers/contacts');
 
 // Main
 // GET
-router.get('/', contactsController.getAllContacts);
+router.get('/contact', contactsController.getAllContacts);
 router.get('/:id', contactsController.getContactById);
 
 // POST
 // router.post('/addContact', urlencodedParser, contactsController.createContact);
 router.post('/addContact', urlencodedParser, function(req, res) {
     console.log(req.body);
-    res.render('contact', {qs: res.query});
+    res.render('/contact', {qs: res.query});
 });
 
 

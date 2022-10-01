@@ -51,7 +51,6 @@ GET https://cse341-cynthia-rawlings.onrender.com/api/contacts/632b8fbe5f590ab44e
 # Red
 
 ### Create contact 
-
 POST http://localhost:3000/api/contacts HTTP/1.1 content-type: application/json
 
 ###
