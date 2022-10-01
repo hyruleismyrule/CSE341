@@ -28,6 +28,7 @@ const getContactById = async (request, response) => {
 };
 
 const createContact = async (req, res) => {
+  console.log(req);
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
