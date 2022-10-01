@@ -4,6 +4,7 @@
 package-lock.json
 Icon
 .eslintrc.js
+yarn.lock
 # Logs
 logs
 *.log

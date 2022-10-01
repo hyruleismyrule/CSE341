@@ -48,19 +48,19 @@ DELETE http://localhost:3000/api/contacts/63387b7d7c3ff0c2ea0bd025 HTTP/1.1
 # GET
 # All Contacts
 ###
-GET https://cse341-cynthia-rawlings.onrender.com/api/contacts
+GET https://cse341-cynthia-rawlings-2.onrender.com/api/contacts
 ###
 
 # Individual Contacts by Id
-GET https://cse341-cynthia-rawlings.onrender.com/api/contacts/632b8e645f590ab44e8023c4
+GET https://cse341-cynthia-rawlings-2.onrender.com/api/contacts/632b8e645f590ab44e8023c4
 ###
-GET https://cse341-cynthia-rawlings.onrender.com/api/contacts/632b8fbe5f590ab44e8023c6
+GET https://cse341-cynthia-rawlings-2.onrender.com/api/contacts/632b8fbe5f590ab44e8023c6
 ###
-GEThttps://cse341-cynthia-rawlings.onrender.com/api/contacts/63378e43cace72b05b84b843
+GET https://cse341-cynthia-rawlings-2.onrender.com/api/contacts/63378e43cace72b05b84b843
 ###
 
 # POST
-POST https://cse341-cynthia-rawlings.onrender.com/api/contacts HTTP/1.1 
+POST https://cse341-cynthia-rawlings-2.onrender.com/api/contacts HTTP/1.1 
 content-type: application/json
 
 {
@@ -73,7 +73,7 @@ content-type: application/json
 
 ###
 # PUT
-PUT https://cse341-cynthia-rawlings.onrender.com/api/contacts/63386efcbe49c53e3b2da0bd HTTP/1.1
+PUT https://cse341-cynthia-rawlings-2.onrender.com/api/contacts/63386efcbe49c53e3b2da0bd HTTP/1.1
 content-type: application/json
 
 {
@@ -86,4 +86,5 @@ content-type: application/json
 
 ###
 # DELETE
-DELETE https://cse341-cynthia-rawlings.onrender.com/api/contacts/63387b7d7c3ff0c2ea0bd025 HTTP/1.1
+DELETE https://cse341-cynthia-rawlings-2.onrender.com/api/contacts/6338afc34cc0785dcdbbbd58 HTTP/1.1
+
