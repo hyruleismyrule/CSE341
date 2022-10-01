@@ -3,6 +3,7 @@
 .env
 package-lock.json
 yarn.lock
+Icon
 # Logs
 logs
 *.log

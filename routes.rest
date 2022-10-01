@@ -1,73 +1,58 @@
-// LOCALHOST
-### Get all contacts
+# *************************
+# localhost:3000
+
+# GET
+# All Contacts
 GET http://localhost:3000/api/contacts
+###
 
+# Individual Contacts by Id
+GET http://localhost:3000/api/contacts/632b8e645f590ab44e8023c4
+###
+GET http://localhost:3000/api/contacts/632b8fa75f590ab44e8023c5
+###
+GET http://localhost:3000/api/contacts/632b8fbe5f590ab44e8023c6
+###
 
-### Get contact by id
-GET http://localhost:3000/api/contacts/63378e43cace72b05b84b843
-
-
-### Create contact
-POST http://localhost:3000/api/contacts HTTP/1.1
+# POST
+POST http://localhost:3000/api/contacts HTTP/1.1 
 content-type: application/json
 
 {
-    "firstName":"Val",
-    "lastName":"Weaver",
-    "email":"aWeaver@test.com",
-    "favoriteColor":"Brown",
-    "birthday":"06/19/2000"
+    "firstName": "Squid", 
+    "lastName": "Vilian", 
+    "email": "meancat@gmail.com", 
+    "favoriteColor": "Blue", 
+    "birthday": "02/04/2020"
 }
 
-
-### PUT contact
-PUT http://localhost:3000/api/contacts/63378e43cace72b05b84b843 HTTP/1.1
+###
+# PUT
+PUT http://localhost:3000/api/contacts/63386efcbe49c53e3b2da0bd HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Sarah",
-    "lastName":"Birch",
-    "email":"test@gmail.com",
-    "favoriteColor":"Green",
-    "birthday":"12/12/20"
-}
-### DELETE contact
-DELETE http://localhost:3000/api/contacts/63378e43cace72b05b84b843 HTTP/1.1
-
-// PRODUCTION Deploy
-### Get all contacts
-GET https://cse341-instructor.herokuapp.com/contacts
-
-
-### Get contact by id
-GET https://cse341-instructor.herokuapp.com/contacts/622023f642f9ab4cd6e060b3
-
-
-### Create contact
-POST https://cse341-instructor.herokuapp.com/contacts HTTP/1.1
-content-type: application/json
-
-{
-    "firstName":"Ashley",
-    "lastName":"Weaver",
-    "email":"aWeaver@test.com",
-    "favoriteColor":"Brown",
-    "birthday":"06/19/2000"
+    "firstName": "Natasha", 
+    "lastName": "Morton", 
+    "email": "fluffycat@gmail.com", 
+    "favoriteColor": "Red", 
+    "birthday": "07/04/2019"
 }
 
+###
+# DELETE
+DELETE http://localhost:8080/contacts/63387ca7804e5447f2d618ef HTTP/1.1
 
-### PUT contact
-PUT https://cse341-instructor.herokuapp.com/contacts/6220bcb39cd507e920c75a0b HTTP/1.1
-content-type: application/json
+# ***************************
+# Render
+# All Contacts
+GET https://cse341-cynthia-rawlings.onrender.com/api/contacts
+###
 
-{
-    "firstName":"Sarah",
-    "lastName":"Birch",
-    "email":"sarahB@gmail.com",
-    "favoriteColor":"Yellow",
-    "birthday":"06/12/20"
-}
-
-
-### DELETE contact
-DELETE https://cse341-instructor.herokuapp.com/contacts/6220e34083149913680f9a64 HTTP/1.1
+# Individual Contacts by Id
+GET https://cse341-cynthia-rawlings.onrender.com/api/contacts/632b8e645f590ab44e8023c4
+###
+GET https://cse341-cynthia-rawlings.onrender.com/api/contacts/632b8fa75f590ab44e8023c5
+###
+GET https://cse341-cynthia-rawlings.onrender.com/api/contacts/632b8fbe5f590ab44e8023c6
+###

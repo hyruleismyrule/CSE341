@@ -16,15 +16,11 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const bodyParser = require('body-parser');
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded());
-
 const mongodb = require('./connections/index');
 
-// app.use(express.bodyParser());
-// app.use('/', require('./routes'));
 
 // Main
+// Body Paser / calling routes
 app
   .use(bodyParser.json())
   .use((req, res, next) => {
@@ -32,7 +28,8 @@ app
     next();
   })
   .use('/', require('./routes'));
-  
+
+// Connect to Mongodb
 mongodb.initDb((err, mongodb) => {
   if (err) {
     console.log(err);
@@ -41,5 +38,3 @@ mongodb.initDb((err, mongodb) => {
     console.log(`Connected to DB and listening on ${port}`);
   }
 });
-
-// console.log("Made it to the end of server.js")

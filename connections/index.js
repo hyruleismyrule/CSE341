@@ -3,13 +3,13 @@
 // *****************
 
 // Connect to mongodb
+// Imports
 const dotenv = require('dotenv');
 dotenv.config();
 const MongoClient = require('mongodb').MongoClient;
 
+// Main
 let _db;
-
-// console.log(process.env.MONGODB_URI);
 
 const initDb = (callback) => {
   if (_db) {
@@ -33,8 +33,7 @@ const getDb = () => {
   return _db;
 };
 
-// console.log("Made it to the end of the connections/index.js")
-
+// Exports
 module.exports = {
   initDb,
   getDb,
