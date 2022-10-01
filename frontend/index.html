@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create a Contact</title>
+</head>
+
+<body>
+    <h1>Create a Contact with Node and MongoDB</h1>
+    <form method="post" action="/addContact">
+        <fieldset>Name
+            <label>First Name
+                <input type="text" name="firstName" placeholder="Jane" required>
+            </label>
+            <br><br>
+            <label>Last Name
+                <input type="text" name="lastName" placeholder="Doe" required>
+            </label>
+        </fieldset>
+        <br>
+        <fieldset>Personal Info
+            <label>Email
+                <input type="email" name="email" placeholder="jane.doe@gmail.com" required>
+            </label>
+            <br><br>
+            <label>Birthday
+                <!-- <input type="date" name="birthday" placeholder="MM/DD/YYYY" required> -->
+                <input type="text" name="birthday" placeholder="MM/DD/YYYY" required>
+            </label>
+            <br><br>
+            <label>Favorite Color
+                <input type="text" name="favoriteColor" placeholder="Pink">
+            </label>
+        </fieldset>
+        <br>
+        <input type="submit" value="Create Contact">
+    </form>
+</body>
+
+</html>
