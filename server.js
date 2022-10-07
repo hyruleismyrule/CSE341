@@ -4,6 +4,8 @@
 // npm install express
 // npm install nodemon
 // npm install body-parser --save
+// npm install --save-dev swagger-autogen
+// npm i swagger-ui-express -S
 // Change package.json
 // this part to
 // "scripts": {
@@ -17,11 +19,17 @@ const app = express();
 const port = 3000;
 const bodyParser = require("body-parser");
 const mongodb = require("./connections/index");
+// const cors = require("cors");
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger.json");
 
 // Main
 // Body Paser / calling routes
 app
+  .use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+  // .use(cors())
   .use(bodyParser.json())
+  .use(express.urlencoded({ extended: true }))
   .use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     next();
