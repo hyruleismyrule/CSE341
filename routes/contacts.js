@@ -22,5 +22,15 @@ router.put("/:id", contactsController.updateContact);
 // DELETE
 router.delete("/:id", contactsController.deleteContact);
 
+// /**
+//  * @swagger
+//  * /api/contacts:
+//  * get:
+//  *  description: Use to request all contacts
+//  *  responces:
+//  *    "200":
+//  *      description: A sucessful responce
+//  */
+
 // Exports
 module.exports = router;
