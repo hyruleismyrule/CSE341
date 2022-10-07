@@ -18,13 +18,39 @@
 
 // Imports
 const express = require("express");
+const cors = require('cors');
 const app = express();
 const port = 3000;
 const bodyParser = require("body-parser");
 const mongodb = require("./connections/index");
 
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger');
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger.json");
+
+// Body Paser / calling routes
+app
+  // .use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+  // .use(cors())
+  .use(cors())
+  .use(bodyParser.json())
+  .use(express.urlencoded({ extended: true }))
+  // .use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+  .use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    next();
+  })
+  .use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+  .use("/", require("./routes"));
+
+// Connect to Mongodb
+mongodb.initDb((err, mongodb) => {
+  if (err) {
+    console.log(err);
+  } else {
+    app.listen(port);
+    console.log(`Connected to DB and listening on ${port}`);
+  }
+});
 
 // const swaggerUi = require("swagger-ui-express");
 // const swaggerDocument = require("./swagger.json");
@@ -66,26 +92,3 @@ const swaggerDocument = require('./swagger');
 //  *      description: A sucessful responce
 //  */
 
-// Body Paser / calling routes
-app
-  // .use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
-  // .use(cors())
-  .use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
-  .use(bodyParser.json())
-  .use(express.urlencoded({ extended: true }))
-  // .use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
-  .use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    next();
-  })
-  .use("/", require("./routes"));
-
-// Connect to Mongodb
-mongodb.initDb((err, mongodb) => {
-  if (err) {
-    console.log(err);
-  } else {
-    app.listen(port);
-    console.log(`Connected to DB and listening on ${port}`);
-  }
-});

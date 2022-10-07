@@ -6,11 +6,13 @@ const doc = {
     description: "Contacts"
   },
   host: "localhost:3000",
-  schemes: ["http"]
+  schemes: ["https"]
 };
 
 const outputFile = "./swagger.json";
+// const endpointsFiles = ["./server.js"];
 const endpointsFiles = ["./routes/index.js"];
+// const endpointsFiles = ["./routes/contacts.js"];
 
 // generate swagger.json
 swaggerAutogen(outputFile, endpointsFiles, doc);
