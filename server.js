@@ -25,7 +25,12 @@ const bodyParser = require("body-parser");
 const mongodb = require("./connections/index");
 
 const swaggerUi = require("swagger-ui-express");
+
+// Note!!! To load the page it needs to be .json at the end
 const swaggerDocument = require("./swagger.json");
+
+// However!!! To generate the auto swagger it needs to not have the .json
+// const swaggerDocument = require("./swagger");
 
 // Body Paser / calling routes
 app
@@ -91,4 +96,3 @@ mongodb.initDb((err, mongodb) => {
 //  *    "200":
 //  *      description: A sucessful responce
 //  */
-
