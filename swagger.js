@@ -8,8 +8,8 @@ const doc = {
     description: 'Contacts'
   },
   // host: 'localhost:3000',
-  host: 'cse341-cynthia-rawlings-2.onrender.com',
-  schemes: ['https']
+  host: '//cse341-cynthia-rawlings-2.onrender.com',
+  schemes: ['http']
 };
 
 const outputFile = './swagger.json';
