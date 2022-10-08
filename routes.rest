@@ -19,11 +19,11 @@ POST http://localhost:3000/api/contacts HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "Squid", 
-    "lastName": "Vilian", 
-    "email": "meancat@gmail.com", 
-    "favoriteColor": "Blue", 
-    "birthday": "02/04/2020"
+    'firstName': 'Squid', 
+    'lastName': 'Vilian', 
+    'email': 'meancat@gmail.com', 
+    'favoriteColor': 'Blue', 
+    'birthday': '02/04/2020'
 }
 
 ###
@@ -32,11 +32,11 @@ PUT http://localhost:3000/api/contacts/6338b3687b861c1f47d35214 HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "Natasha", 
-    "lastName": "Morton", 
-    "email": "fluffycat@gmail.com", 
-    "favoriteColor": "Red", 
-    "birthday": "07/04/2019"
+    'firstName': 'Natasha', 
+    'lastName': 'Morton', 
+    'email': 'fluffycat@gmail.com', 
+    'favoriteColor': 'Red', 
+    'birthday': '07/04/2019'
 }
 
 ###
@@ -64,11 +64,11 @@ POST https://cse341-cynthia-rawlings-2.onrender.com/api/contacts HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "Squid", 
-    "lastName": "Vilian", 
-    "email": "meancat@gmail.com", 
-    "favoriteColor": "Blue", 
-    "birthday": "02/04/2020"
+    'firstName': 'Squid', 
+    'lastName': 'Vilian', 
+    'email': 'meancat@gmail.com', 
+    'favoriteColor': 'Blue', 
+    'birthday': '02/04/2020'
 }
 
 ###
@@ -77,11 +77,11 @@ PUT https://cse341-cynthia-rawlings-2.onrender.com/api/contacts/6338b39b4cc0785d
 content-type: application/json
 
 {
-    "firstName": "Natasha", 
-    "lastName": "Morton", 
-    "email": "fluffycat@gmail.com", 
-    "favoriteColor": "Red", 
-    "birthday": "07/04/2019"
+    'firstName': 'Natasha', 
+    'lastName': 'Morton', 
+    'email': 'fluffycat@gmail.com', 
+    'favoriteColor': 'Red', 
+    'birthday': '07/04/2019'
 }
 
 ###

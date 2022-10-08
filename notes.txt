@@ -1,0 +1,16 @@
+// To start a new project
+// npm init -y
+// npm i
+// npm install express
+// npm install nodemon
+// npm install body-parser --save
+// npm install swagger-ui-express
+// npm install --save-dev swagger-autogen
+// npm i swagger-ui-express -S
+// npm install cors
+// Change package.json
+// this part to
+// 'scripts': {
+//   'test': 'nodemon server.js',
+//   'start': 'node server.js'
+// },

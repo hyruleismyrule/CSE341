@@ -3,7 +3,7 @@
 // ***************
 
 const index = (req, res) => {
-  res.send("Cynthia Rawlings");
+  res.send('Cynthia Rawlings');
 };
 
 // Exports
