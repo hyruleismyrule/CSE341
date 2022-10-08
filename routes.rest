@@ -18,12 +18,12 @@ GET http://localhost:3000/api/contacts/63378e43cace72b05b84b843
 POST http://localhost:3000/api/contacts HTTP/1.1 
 content-type: application/json
 
-{
-    'firstName': 'Squid', 
-    'lastName': 'Vilian', 
-    'email': 'meancat@gmail.com', 
-    'favoriteColor': 'Blue', 
-    'birthday': '02/04/2020'
+{  
+    "firstName": "Squid",
+    "lastName": "Rodgers",
+    "email": "feralcat@gmail.com",
+    "favoriteColor": "White",
+    "birthday": "05/25/2018"
 }
 
 ###

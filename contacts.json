@@ -1,0 +1,50 @@
+[
+    {
+        "_id": "632b8e645f590ab44e8023c4",
+        "firstName": "Anya",
+        "email": "calico.cat@gmail.com",
+        "favoriteColor": "red",
+        "birthday": "2/1/2000",
+        "lastName": "Morton"
+    },
+    {
+        "_id": "632b8fbe5f590ab44e8023c6",
+        "firstName": "Finn",
+        "email": "bunny.cat@gmail.com",
+        "favoriteColor": "blue",
+        "birthday": "7/21/2012",
+        "lastName": "Morton"
+    },
+    {
+        "_id": "63378e43cace72b05b84b843",
+        "firstName": "Panda",
+        "lastName": "Morton",
+        "email": "tuxedocat@gmail.com",
+        "favoriteColor": "Pink",
+        "birthday": "12/25/2015"
+    },
+    {
+        "_id": "63386efcbe49c53e3b2da0bd",
+        "firstName": "Natasha",
+        "lastName": "Morton",
+        "email": "fluffycat@gmail.com",
+        "favoriteColor": "Red",
+        "birthday": "07/04/2019"
+    },
+    {
+        "_id": "6340bfbff4a214816531eab4",
+        "firstName": "Squid",
+        "lastName": "Rodgers",
+        "email": "feralcat@gmail.com",
+        "favoriteColor": "White",
+        "birthday": "05/25/2018"
+    },
+    {
+        "_id": "",
+        "firstName": "Athena",
+        "lastName": "Smith",
+        "email": "doggo@gmail.com",
+        "favoriteColor": "Black",
+        "birthday": "01/10/2002"
+    }
+]
